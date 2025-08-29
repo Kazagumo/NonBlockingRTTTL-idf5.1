@@ -45,7 +45,7 @@ void nextnote();
 // and https://github.com/espressif/arduino-esp32/issues/1720
 #if defined(ESP32)
 void noTone(){
-  ledcWrite(pin, 0); // channel, volume
+  ledcWrite(pin, 0); // pin, volume
 }
 
 void noTone(int pin){
@@ -53,8 +53,8 @@ void noTone(int pin){
 }
 
 void tone(int frq) {
-  ledcWriteTone(pin, frq); // channel, freq
-  ledcWrite(pin, 255); // channel, volume
+  ledcWriteTone(pin, frq); // pin, freq
+  ledcWrite(pin, 255); // pin, volume
 }
 
 void tone(int pin, int frq, int duration){

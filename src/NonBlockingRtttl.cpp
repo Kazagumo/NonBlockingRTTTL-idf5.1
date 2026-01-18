@@ -425,6 +425,7 @@ void stop()
     //issue #6: Bug for ESP8266 environment - noTone() not called at end of sound.
     //disable sound if one abort playback using the stop() command.
     noTone(pin);
+    ledcDetach(pin); // for esp32c6
 
     playing = false;
   }
